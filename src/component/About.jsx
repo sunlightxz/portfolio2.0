@@ -23,7 +23,6 @@ const About = () => {
           start: 'top 65%',
           end: 'bottom center',
           scrub: 1,
-          markers: true
 
         },
       });

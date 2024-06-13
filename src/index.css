@@ -80,3 +80,46 @@
 }
 
 
+.cards {
+    height: 30vh;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    border-radius: 7px;
+    margin-bottom: 50px;
+  }
+  
+  .card-1 {
+    left: 0;
+    top: 0;
+    z-index: 30;
+  }
+  
+  .card-2 {
+    left: 0px;
+    top: 85px;
+    z-index: 40;
+  }
+  
+  .card-3 {
+    left: 0px;
+    top: 180px;
+    z-index: 50;
+  
+  }
+  
+  .card h1 {
+    font-weight: 900;
+    font-stretch: condensed;
+    text-transform: uppercase;
+  }
