@@ -11,6 +11,8 @@ const Hero = () => {
   const imgTitle = useRef(null);
   const imgContainer = useRef(null);
   const textContainer = useRef(null);
+  const heroSection = useRef(null);
+  const herocontainer = useRef(null);
 
   useEffect(() => {
     const heroAnimation = gsap.timeline({ delay: 1.3 });
@@ -19,51 +21,64 @@ const Hero = () => {
       .fromTo(
         imgContainer.current,
         { height: 0 },
-        { height: "100%",duration: 1,delay:1, ease: "power2.out" }
+        { height: "100%", duration: 1, delay: 1, ease: "power2.out" }
       )
       .fromTo(
         imgTitle.current,
-        { y: '50%', opacity:0 },
-        { y: 0, opacity:1 , duration: 1, ease: "power2.out" },
+        { y: '50%', opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
         "-=0."
       )
       .fromTo(
         textContainer.current,
-        { y: '50%', opacity:0 },
-        { y: 0, opacity:1 , duration: 1, ease: "power2.out" },
+        { y: '50%', opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
         "-=0.6"
       );
+
+    gsap.to(herocontainer.current, {
+      scale: 0.95,
+      y: '20px',
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: heroSection.current,
+        start: "bottom bottom",
+        end: "bottom center",
+        scrub: true,
+      }
+    });
   }, []);
 
   return (
     <section
       id="hero"
-      className="section-padding-x sticky top-0 flex min-h-[100vh] items-end pb-10 md:pb-[3% z-20 3xl:pb-[5%]"
-      aria-label="hero" style={{ zIndex: 20 }}
-
+      className="section-padding-x sticky top-0 flex min-h-[100vh] items-end pb-10 md:pb-[3%] z-20 3xl:pb-[5%]"
+      aria-label="hero"
+      style={{ zIndex: 0 }}
+      ref={heroSection}
     >
       <div
         className="flex flex-col w-full text-accent-300 relative"
-        style={{ opacity: 1, transform: "none" }}
+        style={{ opacity: 1, transform: "none" }} ref={herocontainer}
       >
-        <img className="" src={title} alt="Title"                 ref={imgTitle}
-/>
+        <img className="" src={title} alt="Title" ref={imgTitle} />
         <div className="grid-gap mt-[3rem] flex grid-cols-12 flex-col md:grid">
           <div className="relative col-span-3 hidden aspect-[3/3.5] h-full w-full overflow-clip rounded-lg md:block">
             <div className="h-full w-full">
               <img
                 src={heroImg}
-                height={1230} width={1640}
-                className="w-full h-full object-cover object-center "
+                height={1230}
+                width={1640}
+                className="w-full h-full object-cover object-center"
                 alt="Hero"
                 ref={imgContainer}
-
               />
             </div>
           </div>
           <div className="col-span-8 col-start-5 flex flex-col gap-y-12 justify-b sm:gap-y-6 lg:gap-y-24">
             <div className="grid-gap flex items-start justify-between gap-5">
-              <div className="w-16 flex-shrink-0  sm:block sm:w-20 md:w-32 xl:w-40 2xl:w-56 3xl:w-60">
+              <div className="w-16 flex-shrink-0 sm:block sm:w-20 md:w-32 xl:w-40 2xl:w-56 3xl:w-60">
                 <img
                   src={frame}
                   className="h-full w-full"
@@ -87,19 +102,17 @@ const Hero = () => {
                   based in Casablanca, Morocco
                 </p>
               </div>
-             <div className="relative">
+              <div className="relative">
                 <div
                   ref={scroll}
                   className="absolute bottom-0 right-0 flex flex-col items-center justify-center space-y-8"
                 >
-                  <span className=" rotate-90 text-sm text-[#7E766C]">scroll</span>
+                  <span className="rotate-90 text-sm text-[#7E766C]">scroll</span>
                   <div className="relative h-1 w-10 rotate-90 overflow-hidden">
-                    <span
-                      className="absolute h-[0.08em] w-10 translate-x-10 bg-accent-300"
-                    ></span>
+                    <span className="absolute h-[0.08em] w-10 translate-x-10 bg-accent-300"></span>
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
         </div>

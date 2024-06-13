@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-secondary-200 overflow-hidden">
+    <div className="bg-secondary-200">
       {/* Preload animation container */}
       <div className="absolute bg-black load-container inset-0 flex justify-center items-center z-50 preload-container">
         <div className="anim-bl w-full h-full flex justify-center items-center">
