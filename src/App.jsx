@@ -17,10 +17,11 @@ function App() {
       });
 
       TLLOAD 
-        .to('.text-container', { height: "auto", duration: 0.8 })
-        .to('.text1', { height: "auto", duration: 0.2 }, '-=0.1')
-        .to('.text2', { height: "auto", duration: 0.2 }, '-=0.1')
-        .to('.text-container', { y: "-150%", duration: 0.7, delay: 0.3 })
+        .to('.text-container', { height: "auto", duration: 0.7})
+        .to('.text1', { height: "auto", duration: 0.4}, '-=0.1')
+        .to('.text2', { height: "auto", duration: 0.4 }, '-=0.1')
+        .to('.text-container', { y: "-250%", duration: 0.8, delay: 0.2 })
+        .to('.preload-container', { opacity: 0, scale: 1.5, y:'-100%', borderRadius: '60%',   duration: 0.4  },'-=0.3 ') // Scale down and fade out background
         .add(() => {
           document.querySelector('.containerpage').style.opacity = "1";
           document.querySelector('.load-container').style.display = "none";
@@ -35,13 +36,13 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-secondary-100 ">
+    <div className="bg-secondary-200 overflow-hidden">
       {/* Preload animation container */}
-      <div className="absolute bg-black load-container inset-0 flex justify-center items-center z-10 preload-container">
+      <div className="absolute bg-black load-container inset-0 flex justify-center items-center z-50 preload-container">
         <div className="anim-bl w-full h-full flex justify-center items-center">
           <div className="text-container w-full h-0 absolute flex flex-col justify-center items-center  z-20 overflow-hidden">
-            <h2 className="text-[#DEDED6] text1 text-[30px] font-bold ">Amine Asfar</h2>
-            <h2 className="text-[#DEDED6] text2 text-[26px] font-bold ">Porto@2024</h2>
+            <h2 className="text-[#E8E4D1] text1 text-[30px] font-bold ">Amine Asfar</h2>
+            <h2 className="text-[#D6D0B3] text2 text-[36px] font-bold ">@ Porto 2024</h2>
           </div>
         </div>
       </div>
