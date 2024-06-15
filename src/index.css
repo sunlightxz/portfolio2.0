@@ -123,3 +123,13 @@
     font-stretch: condensed;
     text-transform: uppercase;
   }
+
+  .bg-main {
+    background-image: url('/bg-main.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    position: relative;
+  }
+  

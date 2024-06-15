@@ -2,7 +2,7 @@ import React from 'react'
 
 function Projects() {
   return (
-    <section className="section-padding-x relative z-40 min-h-screen py-[150px] w-full overflow-x-clip flex flex-col items-start bg-black text-white pr-2">
+    <section className="section-padding-x relative z-40 min-h-screen py-[150px] w-full overflow-x-clip flex flex-col items-start bg-main text-white pr-2">
 
        <div className="">
             <div className="flex flex-col justify-center items-center mb-10">

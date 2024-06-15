@@ -39,13 +39,13 @@ const About = () => {
   return (
     <section
       id="about"
-      className="section-padding-x rounded-t-3xl relative z-20 min-h-screen w-full overflow-x-clip flex items-center bg-black text-[#D1D1C7] pr-2"
+      className="section-padding-x rounded-t-3xl relative  pb-[30px] z-20 min-h-screen w-full overflow-x-clip flex items-center bg-main text-[#D1D1C7] pr-2"
       aria-label="about"
     >
       <div className="container mx-auto p-6">
         <p
           ref={textRef}
-          className="split-word text-[60px] font-bold  leading-relaxed"
+          className="split-word lg:text-[60px] text-[45px] font-bold  leading-relaxed"
         >
           As a frontend developer and UI/UX designer, I focus on creating seamless
           and engaging user experiences that make digital interactions enjoyable
