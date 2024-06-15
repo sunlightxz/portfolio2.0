@@ -6,22 +6,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   const cardsRef = useRef(null);
+  const serviceRef = useRef(null);
 
   useEffect(() => {
     const context = gsap.context(() => {
       if (cardsRef.current) {
-        const timeln = gsap.timeline({
+        const timeline = gsap.timeline({
           scrollTrigger: {
-            trigger: cardsRef.current,
+            trigger: serviceRef.current,
             pin: true,
-            start: "top 15%",
-            end: "+=1000 ",
+            pinSpacing: true,
+            start: "top top",
+            end: "+=2000", // Adjust this value to ensure all cards are visible before projects start
             scrub: 1,
-            markers:true ,
+            markers: true,
           },
         });
 
-        timeln.addLabel('card1')
+        timeline.addLabel('card1')
         .to('.card-1', { yPercent: 0, opacity: 1 })
         .from('.card-2', { yPercent: 175, opacity: 1 })
           .addLabel('card2')
@@ -38,7 +40,8 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="section-padding-x relative z-20 min-h-screen w-full overflow-x-clip flex flex-col items-start bg-black text-white pr-2 ">
+    <div className="section-padding-x relative z-20 min-h-screen w-full overflow-x-clip flex flex-col items-start bg-black text-white pr-2 " ref={serviceRef}>
+      <div className="w-full flex flex-col items-center relative bg-black">
       <div className="flex w-full flex-col px-[50px]">
         <h1 className="text-[90px] font-semibold text-[#D1D1C7] col-span-6 ">
           WHAT I DO
@@ -88,7 +91,26 @@ orci gravida ullamcorper.</p>
             </div>
             </div>
           </div>
+
+          <div className="card card-3 bg-black px-2 z-10 flex flex-col items-start justify-start w-full min-h-screen">
+              <div className="border-t border-t-[#575755] w-full flex items-start justify-between">
+                <h1 className='py-7 text-left text-[22px] font-bold text-[#BFBFB1] sm:py-6 sm:text-[32] md:py-5 md:text-[30px] lg:text-[42px] 3xl:py-6'>My Experience</h1>
+                <span>.</span>
+              </div>
+              <div className="grid-gap relative flex min-h-[20vh] flex-col w-[90%] place-items-start pb-12 lg:grid lg:grid-cols-12">
+                <p className='col-span-3 max-w-[40ch] pt-2 text-base font-medium text-[#BABAB1] lg:col-span-6'>
+                  Lorem ipsum dolor sit amet consectetur. Morbi nunc pellentesque sed at lorem viverra enim et. Diam ac augue tortor orci gravida ullamcorper.
+                </p>
+                <div className="col-span-3"></div>
+                <div className="col-span-3 flex w-full flex-col gap-y-4 pt-8 lg:pt-0">
+                  <span className='text-[#BABAB1] text-[22px] border-b pb-2 border-[#BABAB1]'>3 Years in Web Development</span>
+                  <span className='text-[#BABAB1] text-[22px] border-b border-[#BABAB1]'>2 Years in UI/UX Design</span>
+                  <span className='text-[#BABAB1] text-[22px] border-b border-[#BABAB1]'>1 Year in Branding</span>
+                </div>
+              </div>
+            </div>
         </div>
+      </div>
       </div>
     </div>
   );
