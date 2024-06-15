@@ -17,7 +17,7 @@ const Services = () => {
             pin: true,
             pinSpacing: true,
             start: "top top",
-            end: "+=2000", // Adjust this value to ensure all cards are visible before projects start
+            end: "+=1000", // Adjust this value to ensure all cards are visible before projects start
             scrub: 1,
             markers: true,
           },

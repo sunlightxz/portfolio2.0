@@ -4,7 +4,7 @@ import Nav from "./component/Nav";
 import Hero from "./component/Hero";
 import About from "./component/About";
 import Services from "./component/Services";
-import Portfolio from "./component/Portfolio";
+import Projects from "./component/Projects";
 import Footer from "./component/Footer";
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
         <Hero />
         <About />
         <Services />
-        <Portfolio />
+        <Projects />
         <Footer />
       </div>
     </div>
