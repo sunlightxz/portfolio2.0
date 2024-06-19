@@ -45,7 +45,7 @@ const About = () => {
       <div className="container mx-auto p-6">
         <p
           ref={textRef}
-          className="split-word lg:text-[60px] text-[45px] font-bold  leading-relaxed"
+          className="split-word lg:text-[60px] md:text-[45px] sm:text-[40px] xsmall:text-[30px] text-[28px] font-bold  leading-relaxed"
         >
           As a frontend developer and UI/UX designer, I focus on creating seamless
           and engaging user experiences that make digital interactions enjoyable

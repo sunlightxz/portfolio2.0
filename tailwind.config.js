@@ -8,7 +8,8 @@ export default {
     
     extend: {
       screens: {
-        'md2': '872px'
+        'md2': '872px',
+        'xsmall': '480px',
       },
       fontSize: {
         'title': ['clamp(3rem, 14vw, 9rem)'],

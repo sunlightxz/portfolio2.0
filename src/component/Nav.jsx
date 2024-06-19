@@ -45,15 +45,15 @@ const Nav = () => {
 
         <nav className="space-x-7 font-grotesk text-body-3 sm:block">
         <a href="#about" className="group relative hidden md:inline-block navLetterB">
-          <span>About</span>
+          <span>about</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
         <a href="#services" className="group relative hidden md:inline-block navLetterB">
-          <span>Resume</span>
+          <span>services</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
         <a href="#works" className="group relative hidden md:inline-block navLetterB">
-          <span>Portfolio</span>
+          <span>projects</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
         <a

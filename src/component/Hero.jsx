@@ -58,6 +58,34 @@ const Hero = () => {
       style={{ zIndex: 10 }}
       ref={heroSection}
     >
+      <svg
+          width="886"
+          height="886"
+          className="pointer-events-none absolute left-[10%] top-1 z-0 block w-5/6 md:hidden"
+          viewBox="0 0 1186 1186"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="593"
+            cy="593"
+            r="593"
+            fill="url(#paint0_linear_54949_267)"
+          ></circle>
+          <defs>
+            <linearGradient
+              id="paint0_linear_54949_267"
+              x1="593"
+              y1="0"
+              x2="593"
+              y2="1186"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#DDDDD5"></stop>
+              <stop offset="1" stopColor="#DDDDD5" stopOpacity="0"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
       <div
         className="flex flex-col w-full text-accent-300 relative"
         style={{ opacity: 1, transform: "none" }} ref={herocontainer}
@@ -107,7 +135,7 @@ const Hero = () => {
                   ref={scroll}
                   className="absolute bottom-0 right-0 flex flex-col items-center justify-center space-y-8"
                 >
-                  <span className="rotate-90 text-sm text-[#7E766C]">scroll</span>
+                  <span className="rotate-90 text-sm text-[#7E766C]">scroll </span>
                   <div className="relative h-1 w-10 rotate-90 overflow-hidden">
                     <span className="absolute h-[0.08em] w-10 translate-x-10 bg-accent-300"></span>
                   </div>

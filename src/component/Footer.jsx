@@ -51,7 +51,7 @@ const Footer = () => {
     >
       <div className="w-full h-full overflow-hidden pt-14 sm:pt-16 3xl:px-[10%] px-6  sm:px-[4%]">
       <div className="w-full h-full flex flex-col items-center justify-center overflow-hidden">
-        <h1 className="lg:text-[160px] text-[140px] text-[#353535] font-bold">
+        <h1 className="lg:text-[160px] md2:text-[110px] sm:text-[70px] text-[44px]  text-[#353535] font-bold">
           GET IN TOUCH
         </h1>
         <a href="mailto:amineasfar101@gmail.com" className="uppercase text-white py-4 px-6 bg-black rounded-3xl flex justify-center items-center gap-3">
@@ -94,15 +94,15 @@ const Footer = () => {
       <div className="relative flex w-full  max-w-full mt-5 h-full justify-center items-center">
       <div className=" border-t border-[#353535]  py-10 mx-auto w-5/6">
         <div className="flex flex-col">
-          <div className="flex flex-row justify-between items-center gap-16">
-            <div className="">
+          <div className="flex flex-row md:justify-between justify-center items-center gap-16">
+            <div className="relative hidden md:inline-block">
               <img
                 src={footerlg}
                 className="w-[300px]"
                 alt=""
               />
             </div>
-            <div className="flex flex-row justify-between gap-16">
+            <div className="flex flex-row justify-between md:gap-16 gap-8">
               <div className="flex flex-col ">
                 <span className="text-[#3C3935] font-medium text-lg">Navigation</span>
                 <a
