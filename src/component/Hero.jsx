@@ -53,9 +53,9 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="section-padding-x sticky top-0 flex min-h-[100vh] items-end pb-10 md:pb-[3%] z-20 3xl:pb-[5%]"
+      className="section-padding-x sticky top-0 flex min-h-[100vh] items-end pb-10 md:pb-[3%] z-20 bg-secondary-200 3xl:pb-[5%]"
       aria-label="hero"
-      style={{ zIndex: 0 }}
+      style={{ zIndex: 10 }}
       ref={heroSection}
     >
       <div

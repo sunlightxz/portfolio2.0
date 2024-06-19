@@ -39,7 +39,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="section-padding-x rounded-t-3xl relative  pb-[30px] z-20 min-h-screen w-full overflow-x-clip flex items-center bg-main text-[#D1D1C7] pr-2"
+      className="section-padding-x rounded-t-3xl relative  pb-[30px] z-40 min-h-screen w-full overflow-x-clip flex items-center bg-main text-[#D1D1C7] pr-2"
       aria-label="about"
     >
       <div className="container mx-auto p-6">

@@ -19,7 +19,6 @@ const Services = () => {
             start: "top top",
             end: "+=1000", // Adjust this value to ensure all cards are visible before projects start
             scrub: 1,
-            markers: true,
           },
         });
 
@@ -40,7 +39,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="section-padding-x relative z-20 min-h-screen w-full overflow-x-clip flex flex-col items-start bg-black text-white pr-2 " ref={serviceRef}>
+    <div className="section-padding-x relative z-40 min-h-screen w-full overflow-x-clip flex flex-col items-start bg-black text-white pr-2 " ref={serviceRef}>
       <div className="w-full flex flex-col items-center relative bg-black">
       <div className="flex w-full flex-col px-[50px]">
         <h1 className="text-[90px] font-semibold text-[#D1D1C7] col-span-6 ">
