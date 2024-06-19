@@ -1,13 +1,35 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import footerlg from '/footerlg.png'
+import { format } from 'date-fns';
+import { enUS } from 'date-fns/locale';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const circleRef = useRef(null);
   const footerRef = useRef(null);
 
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, []);
+
+  const options = {
+    timeZone: 'Africa/Casablanca',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+  };
+
+  const formattedTime = currentTime.toLocaleTimeString('en-US', options);
 
   useEffect(() => {
 
@@ -67,7 +89,7 @@ const Footer = () => {
         </svg>
       </div>
       <div className="relative flex w-full  max-w-full mt-5 h-full justify-center items-center">
-      <div className="px-12 border-t border-[#353535]  py-10 mx-auto w-5/6">
+      <div className=" border-t border-[#353535]  py-10 mx-auto w-5/6">
         <div className="flex flex-col">
           <div className="flex flex-row justify-between items-center gap-16">
             <div className="">
@@ -99,18 +121,18 @@ const Footer = () => {
               <div className="flex flex-col ">
                 <span className="text-[#3C3935] font-medium text-lg">Socials</span>
                 <a
-                  href=""
+                  href="https://www.linkedin.com/in/amine-asfar/"
                   className="text-gray-400 hover:text-[#6C655D] mb-3 mt-4"
                 >
                   Linkedin
                 </a>
-                <a href="" className="text-gray-400 hover:text-[#6C655D] mb-3">
+                <a href="https://www.instagram.com/portugas_d.amine/" className="text-gray-400 hover:text-[#6C655D] mb-3">
                   Instagram
                 </a>
-                <a href="" className="text-gray-400 hover:text-[#6C655D] mb-3">
+                <a href="https://x.com/AmineAsfar" className="text-gray-400 hover:text-[#6C655D] mb-3">
                   Twitter
                 </a>
-                <a href="" className="text-gray-400 hover:text-[#6C655D] mb-3">
+                <a href="https://github.com/sunlightxz" className="text-gray-400 hover:text-[#6C655D] mb-3">
                   Github
                 </a>
               </div>
@@ -132,7 +154,7 @@ const Footer = () => {
        <div className="mt-10 flex flex-col items-end w-full">
        <p className="text-sm text-gray-700 flex flex-col items-start">
             <span className="font-bold">LOCAL TIME</span>
-          9:08 Am Casablanca, MA </p>
+            {formattedTime} Casablanca, MA </p>
        </div>
       </div>
       </div>

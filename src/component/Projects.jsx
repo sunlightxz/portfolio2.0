@@ -1,6 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import project1 from '/project1.png';
+import project2 from '/project2.png';
+import project3 from '/project3.png';
+import project4 from '/project4.png';
+import project5 from '/project5.png';
+import { MdSubdirectoryArrowRight } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,8 +76,10 @@ const Projects = () => {
           <div className="border-t border-gray-500 cursor-pointer project">
             <div className="flex justify-between px-1 py-3 w-full items-center">
               <span className="font-light text-lg flex gap-3 cursor-pointer">
-                <img src="arrow.svg" alt="" width="20" height="20" />
-                <p className="uppercase">Gravity park</p>
+                {/* <img src="arrow.svg" alt="" width="20" height="20" /> */}
+                <MdSubdirectoryArrowRight  className ="text-[30px]"/>
+
+                <p className="uppercase">Speech Sync</p>
               </span>
               <span className="font-light">2024</span>
             </div>
@@ -80,7 +88,9 @@ const Projects = () => {
                 <span className="bg-red-600 py-1 px-3 rounded-full text-xs uppercase hover:bg-red-400">new</span>
               </div>
               <div>
-                <img src="TM_gravity_park.jpg" className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out" alt="" />
+                <a href="https://speechsyn.netlify.app/">
+                <img src={project1} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out" alt="" />
+                </a>
               </div>
             </div>
           </div>
@@ -90,8 +100,8 @@ const Projects = () => {
             <div className="border-t border-gray-500 cursor-pointer project">
               <div className="flex justify-between px-1 py-3 w-full items-center">
                 <span className="font-light text-lg flex gap-3 cursor-pointer">
-                  <img src="arrow.svg" alt="" width="20" height="20" />
-                  <p className="uppercase">Gravity park</p>
+                <MdSubdirectoryArrowRight  className ="text-[30px]"/>
+                  <p className="uppercase">Arctic Monkey website</p>
                 </span>
                 <span className="font-light">2024</span>
               </div>
@@ -100,7 +110,9 @@ const Projects = () => {
                   <span className="bg-red-600 py-1 px-3 rounded-full text-xs uppercase hover:bg-red-400">new</span>
                 </div>
                 <div>
-                  <img src="TM_gravity_park.jpg" className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    <a href="https://main--arcticmonkey.netlify.app/">
+                  <img src={project2} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    </a>
                 </div>
               </div>
             </div>
@@ -109,8 +121,45 @@ const Projects = () => {
             <div className="border-t border-gray-500 cursor-pointer project" ref={lastproject}>
               <div className="flex justify-between px-1 py-3 w-full items-center">
                 <span className="font-light text-lg flex gap-3 cursor-pointer">
-                  <img src="arrow.svg" alt="" width="20" height="20" />
-                  <p className="uppercase">Gravity park</p>
+                    <MdSubdirectoryArrowRight  className ="text-[30px]"/>
+                  <p className="uppercase">Portfolio1.0</p>
+                </span>
+                <span className="font-light">2022</span>
+              </div>
+              <div className="rounded-2xl w-full relative overflow-hidden cursor-pointer">
+                
+                <div>
+                <a href="https://sunlightxz.github.io/Portfoliox/">
+                    <img src={project3} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    </a>                  </div>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 mt-10 gap-10">
+            {/* Repeat the project items as necessary */}
+            <div className="border-t border-gray-500 cursor-pointer project">
+              <div className="flex justify-between px-1 py-3 w-full items-center">
+                <span className="font-light text-lg flex gap-3 cursor-pointer">
+                <MdSubdirectoryArrowRight  className ="text-[30px]"/>
+                  <p className="uppercase">Haff</p>
+                </span>
+                <span className="font-light">2024</span>
+              </div>
+              <div className="rounded-2xl w-full relative overflow-hidden cursor-pointer">
+                <div>
+                    <a href="https://steady-scone-29e2f2.netlify.app/">
+                    <img src={project4} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Other project items */}
+            <div className="border-t border-gray-500 cursor-pointer project" ref={lastproject}>
+              <div className="flex justify-between px-1 py-3 w-full items-center">
+                <span className="font-light text-lg flex gap-3 cursor-pointer">
+                <MdSubdirectoryArrowRight  className ="text-[30px]"/>
+                  <p className="uppercase">Meet&More</p>
                 </span>
                 <span className="font-light">2024</span>
               </div>
@@ -119,8 +168,9 @@ const Projects = () => {
                   <span className="bg-red-600 py-1 px-3 rounded-full text-xs uppercase hover:bg-red-400">new</span>
                 </div>
                 <div>
-                  <img src="TM_gravity_park.jpg" className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
-                </div>
+                    <a href="https://meatandmore.regie404.ma/">
+                    <img src={project5} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    </a>                </div>
               </div>
             </div>
           </div>
