@@ -174,4 +174,14 @@
     display: none;
   }
   
+  .navLetterB {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navLetterB:hover {
+    transform: translateY(-10px);
+  }
   

@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import footerlg from '/footerlg.png'
 import { format } from 'date-fns';
 import { enUS } from 'date-fns/locale';
+import { MdOutlineEmail } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,9 +54,11 @@ const Footer = () => {
         <h1 className="lg:text-[160px] text-[140px] text-[#353535] font-bold">
           GET IN TOUCH
         </h1>
-        <button className="uppercase text-white py-4 px-6 bg-black rounded-3xl">
+        <a href="mailto:amineasfar101@gmail.com" className="uppercase text-white py-4 px-6 bg-black rounded-3xl flex justify-center items-center gap-3">
+        <MdOutlineEmail className= "text-[25px]" />
+
           drop me an email
-        </button>
+        </a>
       </div>
       <div className="relative w-full h-full flex justify-center items-center">
         <svg

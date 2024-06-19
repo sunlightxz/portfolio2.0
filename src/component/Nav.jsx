@@ -44,31 +44,32 @@ const Nav = () => {
         <a href="" className="z-50 font-medium text-[24px]">Amine</a>
 
         <nav className="space-x-7 font-grotesk text-body-3 sm:block">
-        <a href="#about" className="group relative hidden md:inline-block">
+        <a href="#about" className="group relative hidden md:inline-block navLetterB">
           <span>About</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
-        <a href="#services" className="group relative hidden md:inline-block">
+        <a href="#services" className="group relative hidden md:inline-block navLetterB">
           <span>Resume</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
-        <a href="#works" className="group relative hidden md:inline-block">
+        <a href="#works" className="group relative hidden md:inline-block navLetterB">
           <span>Portfolio</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
         <a
-
-          className="button group relative hover:bg-transparent"
-          href="#contact"
-        >
-          <span className="relative w-fit">
-            <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
-            <span>Let&apos;s Talk.</span>
-          </span>
-        </a>
+         
+         className="button group relative hover:bg-[#D1D1C7] hover:text-[#0E0E0C]"
+         href="#contact"
+       >
+         <span className="relative w-fit">
+           <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
+           <span>Let&apos;s Talk.</span>
+         </span>
+       </a>
       </nav>
     </header>
   );
 };
 
 export default Nav;
+
