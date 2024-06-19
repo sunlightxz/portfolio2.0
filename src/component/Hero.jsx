@@ -135,7 +135,7 @@ const Hero = () => {
                   ref={scroll}
                   className="absolute bottom-0 right-0 flex flex-col items-center justify-center space-y-8"
                 >
-                  <span className="rotate-90 text-sm text-[#7E766C]">scroll </span>
+                  <a href="#about" className="rotate-90 text-sm text-[#7E766C]">scroll </a>
                   <div className="relative h-1 w-10 rotate-90 overflow-hidden">
                     <span className="absolute h-[0.08em] w-10 translate-x-10 bg-accent-300"></span>
                   </div>
