@@ -30,7 +30,7 @@ const Services = () => {
           .to('.card-2', { yPercent: 0, opacity: 1 })
           .from('.card-3', { yPercent: 75, opacity: 0 })
           .addLabel('card3')
-          .to('.card-2', { scale: 1, yPercent: -5, opacity: 0.9 }, '-=0.3')
+          .to('.card-2', { scale: 1, yPercent: -5, opacity: 1 }, '-=0.3')
           .to('.card-3', { yPercent: 0, opacity: 1 });
       }
     }, cardsRef);

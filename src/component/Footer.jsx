@@ -129,10 +129,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="mt-10 text-sm text-gray-700 flex flex-col">
-            <span>LOCAL TIME
-</span>
-          ©Sunglightxz, All rights resereved.</p>
+       <div className="mt-10 flex flex-col items-end w-full">
+       <p className="text-sm text-gray-700 flex flex-col items-start">
+            <span className="font-bold">LOCAL TIME</span>
+          9:08 Am Casablanca, MA </p>
+       </div>
       </div>
       </div>
       </div>

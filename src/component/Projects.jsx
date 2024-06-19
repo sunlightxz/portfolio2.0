@@ -11,7 +11,6 @@ const Projects = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(projectref.current, {
-        y: '50px',
         duration: 2,
         borderRadius :'20px' ,
         ease: "power.out",
