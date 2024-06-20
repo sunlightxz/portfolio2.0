@@ -10,6 +10,8 @@ import Footer from "./component/Footer";
 function App() {
   useEffect(() => {
     const loader = () => {
+      console.log("Loader function triggered");
+      
       const TLLOAD = gsap.timeline({
         defaults: {
           ease: "power2",
@@ -17,18 +19,20 @@ function App() {
       });
 
       TLLOAD
-        .to(".text-container", { height: "auto", duration: 0.7 })
-        .to(".text1", { height: "auto", duration: 0.4 }, "-=0.1")
-        .to(".text2", { height: "auto", duration: 0.4 }, "-=0.1")
-        .to(".text-container", { y: "-250%", duration: 0.8, delay: 0.2 })
+        .to(".text-container", { height: "auto", duration: 0.7, onComplete: () => console.log("Step 1 complete") })
+        .to(".text1", { height: "auto", duration: 0.4, onComplete: () => console.log("Step 2 complete") }, "-=0.1")
+        .to(".text2", { height: "auto", duration: 0.4, onComplete: () => console.log("Step 3 complete") }, "-=0.1")
+        .to(".text-container", { y: "-250%", duration: 0.8, delay: 0.2, onComplete: () => console.log("Step 4 complete") })
         .to(".preload-container", {
           opacity: 0,
           scale: 1.5,
           y: "-100%",
           borderRadius: "60%",
           duration: 0.4,
+          onComplete: () => console.log("Step 5 complete"),
         }, "-=0.3")
         .add(() => {
+          console.log("Final step: showing main content");
           document.querySelector(".containerpage").style.opacity = "1";
           document.querySelector(".load-container").style.display = "none";
         });
