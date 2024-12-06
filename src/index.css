@@ -129,7 +129,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 10000;
+    z-index: 40;
     position: relative;
   }
   

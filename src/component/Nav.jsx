@@ -7,7 +7,7 @@ const Nav = () => {
   const navBar = useRef(null);
   const linkRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const tl = gsap.timeline();
+  const lastScrollTop = useRef(0);
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -32,13 +32,43 @@ const Nav = () => {
   });
 
   useEffect(() => {
-    tl.to(navBar.current, {
+    // Initial animation to show the navbar
+    gsap.to(navBar.current, {
       y: 0,
       duration: 3,
       delay: 1.3,
       ease: "power4.inOut",
     });
-  });
+
+    // Create scroll trigger for hiding/showing navbar
+    const showAnim = gsap.from(navBar.current, { 
+      yPercent: -100,
+      paused: true,
+      duration: 0.2
+    }).progress(1);
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        const scrollTop = self.scroll();
+        
+        if (scrollTop > lastScrollTop.current) {
+          // Scrolling down
+          showAnim.reverse();
+        } else {
+          // Scrolling up
+          showAnim.play();
+        }
+        
+        lastScrollTop.current = scrollTop;
+      }
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   const linkStyle = {
     transform: `translate(${mousePosition.x * 0.05}px, ${mousePosition.y * 0.05}px)`,
@@ -46,7 +76,7 @@ const Nav = () => {
 
   return (
     <header
-      className="absolute top-0 z-50 flex w-full items-center -translate-y-full justify-between bg-secondary-200 px-[50px] py-3 "
+      className="fixed top-0 z-50 flex w-full items-center -translate-y-full justify-between bg-secondary-200 px-[50px] py-3 transition-all duration-75"
       ref={navBar}
     >
       <a href="" className="z-50 font-medium text-[24px]" ref={linkRef} style={linkStyle}>
@@ -69,7 +99,7 @@ const Nav = () => {
         >
           <span className="relative w-fit">
             <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
-            <span>Let's Talk.</span>
+            <span>Lets Talk.</span>
           </span>
         </a>
       </nav>

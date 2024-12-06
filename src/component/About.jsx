@@ -42,16 +42,17 @@ const About = () => {
       className="section-padding-x rounded-t-3xl relative  pb-[30px] z-40 min-h-screen w-full overflow-x-clip flex items-center bg-main text-[#D1D1C7] pr-2"
       aria-label="about"
     >
-      <div className="container mx-auto p-6">
-        <p
-          ref={textRef}
-          className="split-word lg:text-[60px] md:text-[45px] sm:text-[40px] xsmall:text-[30px] text-[28px] font-bold  leading-relaxed"
-        >
-          As a frontend developer and UI/UX designer, I focus on creating seamless
-          and engaging user experiences that make digital interactions enjoyable
-          and efficient.
-        </p>
-      </div>
+        <div className="flex justify-between w-full items-start gap-4"   >
+          <h3 className='text-[#C5BD99] text-[35px] font-mono max-w-[30%]'ref={textRef} >A Little About Me</h3>
+          <div className='flex flex-col items-start max-w-[70%] mt-10'>
+            <p className='text-[50px] text-[#BFBFB1] mb-[80px]' ref={textRef}>Creating intuitive and beautiful 
+websites is my passion — because 
+great design makes the web feel
+more human
+            </p>
+            <a href='' className='text-[#C5BD99] text-[30px] '>Let's Work Together! </a>
+            </div>
+        </div>
     </section>
   );
 };
