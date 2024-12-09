@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import project1 from '/project1.png';
-import project2 from '/project2.png';
-import project3 from '/project3z.png';
-import project4 from '/project4.png';
+import project1 from '/prj1.mp4';
+import project2 from '/prj2.mp4';
+import project3 from '/prj3.mp4';
+import project4 from '/prj4.mp4';
 import project5 from '/project5.png';
 import { MdSubdirectoryArrowRight } from "react-icons/md";
 
@@ -89,7 +89,7 @@ const Projects = () => {
               </div>
               <div>
                 <a href="https://speechsyn.netlify.app/">
-                <img src={project1} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out" alt="" />
+                <video muted loop autoplay src={project1} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out" alt="" />
                 </a>
               </div>
             </div>
@@ -111,7 +111,7 @@ const Projects = () => {
                 </div>
                 <div>
                     <a href="https://main--arcticmonkey.netlify.app/">
-                  <img src={project2} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                  <video muted loop autoplay src={project2} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
                     </a>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const Projects = () => {
                 </div>
                 <div>
                     <a href="https://meatandmore.regie404.ma/">
-                    <img src={project5} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    <img   src={project5} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
                     </a>                </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ const Projects = () => {
               <div className="rounded-2xl w-full relative overflow-hidden cursor-pointer">
                 <div>
                     <a href="https://steady-scone-29e2f2.netlify.app/">
-                    <img src={project4} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    <video muted loop autoplay src={project4} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
                     </a>
                 </div>
               </div>
@@ -169,7 +169,7 @@ const Projects = () => {
                 
                 <div>
                 <a href="https://sunlightxz.github.io/Portfoliox/">
-                    <img src={project3} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
+                    <video muted loop autoplay src={project3} className="object-cover hover:grayscale duration-300 hover:scale-105 transition-all ease-in-out w-full h-full" alt="" />
                     </a>                  </div>
               </div>
             </div>
