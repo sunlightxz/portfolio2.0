@@ -19,7 +19,6 @@ const Projects = () => {
     const ctx = gsap.context(() => {
       gsap.to(projectref.current, {
         duration: 2,
-        borderRadius: '20px',
         ease: "power.out",
         scrollTrigger: {
           trigger: projectref.current,
@@ -63,7 +62,7 @@ const Projects = () => {
 
   return (
     <section id="works"
-    className="section-padding-x relative z-40 min-h-screen py-[150px] w-full overflow-x-clip flex flex-col items-start bg-main text-white pr-2" ref={projectref}>
+    className="section-padding-x relative z-40 min-h-screen py-[150px] w-full overflow-x-clip flex flex-col items-start bg-main text-white " ref={projectref}>
       <div>
         <div className="flex flex-col justify-center items-center mb-10">
           <h1 className="lg:text-[76px] md:text-[65px] text-[50px] font-cairo font-semibold mb-4 text-[#C5BD99]">FEATURED WORK</h1>

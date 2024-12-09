@@ -7,6 +7,7 @@ import WhatIDo from './component/WhatIDo';
 import Projects from './component/Projects';
 import Footer from './component/Footer';
 import useLenis from './hooks/useLenis';
+import Show from './component/Show';
 
 function App() {
   useLenis();
@@ -65,6 +66,7 @@ function App() {
         <About />
         <WhatIDo />
         <Projects />
+        <Show/>
         <Footer />
       </div>
     </div>

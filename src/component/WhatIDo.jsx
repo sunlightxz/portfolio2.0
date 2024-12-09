@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const WhatIDo = () => {
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState(0); // Initialize with 0 instead of null
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
@@ -73,6 +73,12 @@ const WhatIDo = () => {
           }
         );
       });
+
+      // Set initial state of first section
+      gsap.set("#content-0", {
+        height: "auto",
+        opacity: 1,
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -105,15 +111,18 @@ const WhatIDo = () => {
       className="section-padding-x relative z-40 min-h-screen py-[150px] w-full overflow-x-clip flex flex-col items-start bg-main text-white pr-2"
     >
       <div className="max-w-6xl mx-auto px-8 py-24">
-      <div className="flex flex-col gap-8 mb-12">
-        <h1 ref={titleRef} className="text-[#C5BD99] text-6xl font-bold ">
-          WHAT I DO
-        </h1>
-        <div className="w-full flex ">
-          <div className="basis-1/2"></div>
-        <p className="basis-1/2 items-end text-[25px] font-light  text-[#A59D8E]">I design and develop websites that are both functional and visually captivating, making sure your digital presence stands out.</p>
+        <div className="flex flex-col gap-8 mb-12">
+          <h1 ref={titleRef} className="text-[#C5BD99] text-6xl font-bold">
+            WHAT I DO
+          </h1>
+          <div className="w-full flex">
+            <div className="basis-1/2"></div>
+            <p className="basis-1/2 items-end text-[25px] font-light text-[#A59D8E]">
+              I design and develop websites that are both functional and visually
+              captivating, making sure your digital presence stands out.
+            </p>
+          </div>
         </div>
-      </div>
         <div className="space-y-12">
           {sections.map((section, index) => (
             <div key={index} className="section-item border-t border-[#333] pt-8">
@@ -124,15 +133,17 @@ const WhatIDo = () => {
                 <h2 className="text-[#E6DFD3] text-3xl font-medium">
                   {section.title}
                 </h2>
-                <button className="text-3xl  hover:opacity-50 hover:rotate-[50deg]  hover:ease-in-out hover:duration-200 transition-opacity">
+                <button className="text-3xl hover:opacity-50 hover:rotate-[50deg] hover:ease-in-out hover:duration-200 transition-opacity">
                   ✦
                 </button>
               </button>
-
               <div
                 id={`content-${index}`}
                 className="overflow-hidden"
-                style={{ height: 0, opacity: 0 }}
+                style={{
+                  height: index === 0 ? "auto" : 0,
+                  opacity: index === 0 ? 1 : 0,
+                }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-8">
                   <p className="text-[#999] text-lg max-w-xl">
