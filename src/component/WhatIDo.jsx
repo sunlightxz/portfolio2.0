@@ -110,7 +110,7 @@ const WhatIDo = () => {
       ref={sectionRef}
       className="section-padding-x relative z-40 min-h-screen py-[150px] w-full overflow-x-clip flex flex-col items-start bg-main text-white pr-2"
     >
-      <div className="max-w-6xl mx-auto px-8 py-24">
+      <div className="w-full py-24">
         <div className="flex flex-col gap-8 mb-12">
           <h1 ref={titleRef} className="text-[#C5BD99] text-6xl font-bold">
             WHAT I DO

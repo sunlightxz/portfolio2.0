@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import expb from '/expb.png';
+import vf from '/text.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,7 @@ const Show = () => {
   return (
     <div 
       ref={containerRef}
-      className="relative z-40 h-[100vh] w-full overflow-x-clip bg-black"
+      className="relative z-40 h-[100vh] bg-main w-full overflow-x-clip bg-black"
     >
       <div className="h-screen w-full items-center justify-center overflow-hidden">
         <div className="flex h-full w-full items-center justify-center overflow-hidden relative flex-nowrap">
@@ -71,10 +72,11 @@ const Show = () => {
             <span>M</span>
           </h1>
           <div className="relative flex items-center justify-center overflow-hidden z-10">
-            <img 
+            <video 
               ref={imageRef}
-              src={expb} 
-              alt="" 
+              src={vf} 
+              alt="" loop playsInline autoPlay
+              muted
               className="object-cover"
             />
           </div>

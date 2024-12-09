@@ -65,8 +65,8 @@ const Projects = () => {
     className="section-padding-x relative z-40 min-h-screen py-[150px] w-full overflow-x-clip flex flex-col items-center bg-main text-white " ref={projectref}>
       <div>
         <div className="flex flex-col justify-center items-center mb-10">
-          <h1 className="lg:text-[76px] md:text-[65px] text-[50px] font-cairo font-semibold mb-4 text-[#C5BD99]">FEATURED WORK</h1>
-          <p className="flex flex-col items-center justify-center text-xl font-light text-gray-400">
+          <h1 className="lg:text-[76px] md:text-[65px] text-[45px] font-cairo font-semibold mb-4 text-[#C5BD99]">FEATURED WORK</h1>
+          <p className="flex flex-col items-center justify-center text-xl sm:text-start text-center font-light text-gray-400">
             <span>Trailblazing the Future: Our Latest Projects</span>
             <span>Showcase Innovation and Excellence in Action.</span>
           </p>

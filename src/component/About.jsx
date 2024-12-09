@@ -38,18 +38,20 @@ const About = () => {
   return (
     <section
       id="about"
-      className="section-padding-x rounded-t-3xl relative  pb-[30px] z-40 min-h-screen w-full overflow-x-clip flex items-center bg-main text-[#D1D1C7] pr-2"
+      className="section-padding-x rounded-t-3xl relative  pb-[30px] z-40 min-h-screen w-full overflow-x-clip flex items-center  bg-main text-[#D1D1C7] pr-2"
       aria-label="about"
     >
-      <div className="flex justify-between w-full items-start gap-4">
+      <div className="flex justify-between flex-col flex-nowrap w-full items-start gap-4 ">
         <h3 className="text-[#C5BD99] text-[35px] font-mono =" ref={textRef}>
           A Little About Me
         </h3>
         <div className="flex flex-col items-start mt-10">
-          <p className="text-[50px] text-[#BFBFB1] mb-[80px]" ref={textRef}>
-            Creating intuitive and beautiful websites is my passion — because
-            great design makes the web feel more human
-          </p>
+        <p className="text-[50px] text-[#BFBFB1] mb-[80px]" ref={textRef}>
+    Creating intuitive and beautiful websites is my passion — because great design makes the web feel more human.  
+    I specialize in blending creativity with functionality, crafting experiences that are not only visually appealing but also user-friendly.  
+    Whether it’s building responsive interfaces, designing engaging interactions, or solving complex problems,  
+    I strive to bring ideas to life through clean and effective design.
+  </p>
           <a href="" className="text-[#C5BD99] text-[30px] ">
             Let's Work Together!{" "}
           </a>
