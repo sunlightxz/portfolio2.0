@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="bg-secondary-200">
-      <div className="absolute bg-black load-container inset-0 flex justify-center items-center z-50 preload-container">
+      <div className="sm:absolute  bg-black load-container inset-0 flex justify-center items-center z-50 preload-container">
         <div className="anim-bl w-full h-full flex justify-center items-center">
           <div className="text-container w-full h-auto absolute flex flex-col justify-center items-center z-20">
             <h2 className="text-[#E8E4D1] text1 text-[30px] font-bold">Amine Asfar</h2>

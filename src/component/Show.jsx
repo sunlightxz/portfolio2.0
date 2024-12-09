@@ -25,7 +25,6 @@ const Show = () => {
         end: "bottom top",
         scrub: 1,
         pin: true,
-        markers: true ,
       }
     });
 

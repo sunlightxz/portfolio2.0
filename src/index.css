@@ -123,11 +123,7 @@
     font-stretch: condensed;
     text-transform: uppercase;
   }
-  @media (max-width: 768px) {
-    .preload-container {
-      display: none !important;
-    }
-  }
+
   .bg-main {
     background-image: url('/bg-main.png');
     background-size: cover;
